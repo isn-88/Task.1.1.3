@@ -1,5 +1,6 @@
 package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.dao.UserDao;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<User> users;
-        UserDaoJDBCImpl userDao = new UserDaoJDBCImpl();
+        UserDao userDao = new UserDaoJDBCImpl();
         userDao.createUsersTable();
         userDao.saveUser("Александр", "Иванов",30);
         userDao.saveUser("Сергей", "Петров", 29);
